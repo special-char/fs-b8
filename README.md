@@ -1,0 +1,1 @@
+- [JSON_LD](https://developers.google.com/search/docs/appearance/structured-data/search-gallery)
