@@ -64,13 +64,69 @@
     <!-- png 100kb -->
     <!-- webp 75kb -->
     <!-- avif 50kb -->
-    <img
+    <!-- <img
       src="https://ik.imagekit.io/mdzi40eohii/production/images/Python_5fb38de04a_KWumnJAw-.jpg"
       alt="My Image"
-      height="50"
-      width="50"
+      style="height: 50px; aspect-ratio: 16/9"
       loading="lazy"
+    /> -->
+
+    <img
+      src="https://ik.imagekit.io/mdzi40eohii/production/images/607e15d7c0c9f4037bde6f44_image_home_hero_education_x_template_b173c6c7db_TNZ2gvf02.jpg?tr=ar-3-4,w-1080,q-75"
+      alt=""
+      style="
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        background-color: yellow;
+      "
     />
+
+    <picture>
+      <source
+        srcset="./public/images/banner@1x.jpg, ./public/images/banner@2x.jpg 2x"
+        media="(max-width: 1024px)"
+      />
+      <!-- <source
+        srcset="./public/images/banner@2x.jpg"
+        media="(max-width: 1024px)"
+      /> -->
+
+      <source
+        srcset="./public/images/banner@2x.jpg"
+        media="(max-width: 1024px)"
+      />
+      <img
+        src="./public/images/banner@3x.jpg"
+        alt="banner image"
+        style="width: 100%; height: 500px"
+      />
+    </picture>
+
+    <video width="250" controls>
+      <source
+        srcset="
+          https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm
+        "
+        type="video/webm"
+      />
+      <source
+        srcset="
+          https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4
+        "
+        type="video/mp4"
+      />
+      <p>
+        your browser is not supporting this video type
+        <a
+          href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+          >download</a
+        >
+        video from here
+      </p>
+    </video>
+
+    <audio controls></audio>
 
     <header>
       <a href="#">Logo</a>
