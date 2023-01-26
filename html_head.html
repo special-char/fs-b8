@@ -16,27 +16,19 @@
 <body>
     <h1>we are making my portfolio</h1>
     <header>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         <a href="#"><img src="/public/img/compass-navigator-icon.svg" alt="my" style="height: 125px; width: 125px;"></a>
-        <nav style="padding: 1px; margin-left: 50px;">
-=======
-        <nav>
->>>>>>> Stashed changes
-=======
-        <nav>
->>>>>>> Stashed changes
+        <nav style="margin-left: 50px; position: relative; top: -117px; left:50px; ">
+
             <ul>
                 <li><a href="#">header</a></li>
                 <li><a href="#main">main</a></li>
                 <li><a href="#footer">footer</a></li>
             </ul>
-        </nav>
-        <hr>
+        </nav>    
     </header>
-    
+    <hr>
     <main id="main">
-        <img src="/public/img/download.jpg" 
+        <img src="/public/img/download1.png" 
         alt="phtot"
         height="400px"
         width="300px"
@@ -45,12 +37,19 @@
     </main>
 
     <footer id="footer">
-        <img src="/public/img/download.png" 
-        alt="phtot"
-        height="400px"
-        width="300px"
-        loading="lazy"
-        >
+       <picture>
+        <!-- <source
+            srcset="/public/img/download2.jpg"
+            media="(min-width:450px)"
+        > -->
+        <source>
+            <img src="/public/img/download1.png" 
+            alt="phtot"
+            height="400px"
+            width="300px"
+            loading="eager"
+            >
+       </picture>
     </footer>
     
 </body>
