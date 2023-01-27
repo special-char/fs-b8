@@ -71,6 +71,186 @@
       loading="lazy"
     /> -->
 
+    <dialog open>
+      <h1>Loadig...</h1>
+    </dialog>
+
+    <form>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+      </div>
+      <div>
+        <label
+          for="txtName"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Name</label
+        >
+        <input id="txtName" type="text" required autocomplete="" />
+      </div>
+
+      <div>
+        <label
+          for="txtEmail"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Email</label
+        >
+        <input id="txtEmail" type="email" />
+      </div>
+
+      <div>
+        <label
+          for="txtTel"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Tel</label
+        >
+        <input id="txtTel" type="tel" />
+      </div>
+
+      <div>
+        <label
+          for="txtDate"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Date</label
+        >
+        <input id="txtDate" type="date" />
+      </div>
+
+      <div>
+        <label
+          for="txtDateTime"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >DateTime</label
+        >
+        <input id="txtDateTime" type="datetime-local" />
+      </div>
+
+      <div>
+        <label
+          for="txtColor"
+          style="
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+          "
+          >Color</label
+        >
+        <input id="txtColor" type="color" />
+      </div>
+
+      <fieldset>
+        <legend>Gender</legend>
+
+        <div>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hobbies</legend>
+
+        <div>
+          <input type="checkbox" name="hobbies" id="cricket" />
+          <label for="cricket">Cricket</label>
+        </div>
+        <div>
+          <input type="checkbox" name="hobbies" id="dance" />
+          <label for="dance">Dance</label>
+        </div>
+      </fieldset>
+
+      <select multiple>
+        <option value="">Please Select Hobbies</option>
+        <optgroup label="Sports">
+          <option value="cricket">Cricket</option>
+          <option value="football">Football</option>
+        </optgroup>
+        <optgroup label="Activity">
+          <option value="dance">Dance</option>
+          <option value="drawing">Drawing</option>
+        </optgroup>
+      </select>
+
+      <div>
+        <label for="collegeName">College Name</label>
+        <input type="text" id="collegeName" list="college-list" />
+        <datalist id="college-list">
+          <option value="Nirma" />
+          <option value="DDIT" />
+          <option value="Silveroack" />
+        </datalist>
+      </div>
+
+      <!-- <progress></progress> -->
+
+      <meter></meter>
+
+      <!-- <input type="range" name="" id="" /> -->
+
+      <button type="submit">Submit</button>
+    </form>
+
     <img
       src="https://ik.imagekit.io/mdzi40eohii/production/images/607e15d7c0c9f4037bde6f44_image_home_hero_education_x_template_b173c6c7db_TNZ2gvf02.jpg?tr=ar-3-4,w-1080,q-75"
       alt=""
