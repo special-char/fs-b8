@@ -22,16 +22,22 @@
 
             <ul>
                 <li><a href="#">header</a></li>
+                <li><a href="#formm">formm</a></li>
                 <li><a href="#main">main</a></li>
                 <li><a href="#footer">footer</a></li>
             </ul>
         </nav>  
-        <form>
+        <form id="formm">
             <fieldset>
                 <legend>about you</legend>
                 <label for="name">name</label>
-                <input type="text" id="name">
-
+                <input type="text" id="name" list="namel">
+                <datalist id="namel">
+                    <option value="y1">
+                    <option value="y2">
+                    <option value="y3">
+                </datalist>
+                
                 <br>
 
                 <label for="email">email</label>
@@ -42,6 +48,10 @@
                 <label for="bday">birthday</label>
                 <input type="datetime-local" id="bday">
 
+                <br>
+                
+                <input type="color">
+                
                 <br>
 
                 <label>select your gender</label><br>
@@ -54,19 +64,17 @@
                 <label for="avt">select your Activity</label>
                 <br>
                 <select>
-                    <optgroup>
+                    <optgroup label="g">
                         <legend>games</legend>
                         <option value="g1">g1</option>
                         <option value="g2">g2</option>
                     </optgroup>
-                    <optgroup>
+                    <optgroup label="a">
                         <legend> Activity</legend>
                         <option value="a1">a1</option>
                         <option value="a2">a2</option>
                     </optgroup>
                 </select>
-                
-
             </fieldset>
         </form>  
     </header>
