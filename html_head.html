@@ -25,7 +25,50 @@
                 <li><a href="#main">main</a></li>
                 <li><a href="#footer">footer</a></li>
             </ul>
-        </nav>    
+        </nav>  
+        <form>
+            <fieldset>
+                <legend>about you</legend>
+                <label for="name">name</label>
+                <input type="text" id="name">
+
+                <br>
+
+                <label for="email">email</label>
+                <input type="email" id="email">
+
+                <br>
+
+                <label for="bday">birthday</label>
+                <input type="datetime-local" id="bday">
+
+                <br>
+
+                <label>select your gender</label><br>
+                <input type="radio" id="male" name="gender"><label for="male">male</label>
+                <br>
+                <input type="radio" id="female" name="gender"><label for="female">female</label>
+
+                <br>
+
+                <label for="avt">select your Activity</label>
+                <br>
+                <select>
+                    <optgroup>
+                        <legend>games</legend>
+                        <option value="g1">g1</option>
+                        <option value="g2">g2</option>
+                    </optgroup>
+                    <optgroup>
+                        <legend> Activity</legend>
+                        <option value="a1">a1</option>
+                        <option value="a2">a2</option>
+                    </optgroup>
+                </select>
+                
+
+            </fieldset>
+        </form>  
     </header>
     <hr>
     <main id="main">
