@@ -75,7 +75,17 @@
       <h1>Loadig...</h1>
     </dialog>
 
-    <form>
+    <form oninput="result.value=parseInt(age.value)">
+      <div>
+        <label for="age">Age</label>
+        <input type="range" id="age" name="age" min="0" max="100" value="10" />
+        <output name="result" for="age">10</output>
+      </div>
+
+      <div>
+        <label for="document">Document</label>
+        <input type="file" name="" id="" />
+      </div>
       <div>
         <label for="message">Message</label>
         <textarea id="message" rows="5"></textarea>
@@ -96,7 +106,7 @@
           "
           >Name</label
         >
-        <input id="txtName" type="text" required autocomplete="" />
+        <input id="txtName" type="text" required autocomplete="given-name" />
       </div>
 
       <div>
