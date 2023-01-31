@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"); */
+
+      @font-face {
+        font-family: "poppins-med";
+        src: url("./assets/fonts/poppins-medium-webfont.woff2") format("woff2"),
+          url("./assets/fonts/poppins-medium-webfont.woff") format("woff");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "poppins-reg";
+        src: url("./assets/fonts/poppins-regular-webfont.woff2") format("woff2"),
+          url("./assets/fonts/poppins-regular-webfont.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "poppins-light";
+        src: url("./assets/fonts/poppins-light-webfont.woff2") format("woff2"),
+          url("./assets/fonts/poppins-light-webfont.woff") format("woff");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "poppins-ex-light";
+        src: url("./assets/fonts/poppins-extralight-webfont.woff2")
+            format("woff2"),
+          url("./assets/fonts/poppins-extralight-webfont.woff") format("woff");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      :root {
+        --primary-color: #6200ee;
+        --primary-variant-color: #3700b3;
+      }
+
+      a {
+        font-family: "poppins-reg", sans-serif;
+        font-size: 18px;
+      }
+
+      header > a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      h1 ~ h2 {
+        color: red;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      /* li:first-child > a {
+        color: coral;
+      } */
+
+      /* a:hover {
+        color: coral;
+      } */
+
+      /* psudo classes */
+      /* ul > li:nth-child(n) > a {
+        color: coral;
+      } */
+
+      /* a:focus {
+        color: red;
+      } */
+
+      /* li::marker {
+        content: "*";
+      } */
+
+      /* h1::before {
+        content: "...";
+      } */
+      .header {
+        background-color: red;
+        height: 64px;
+      }
+
+      .header--light {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">Logo</a>
+      <nav class="header__nav">
+        <ul class="header__nav__ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="banner">
+        <h1>Banner</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+      </section>
+      <section>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+      </section>
+    </main>
+  </body>
+</html>
