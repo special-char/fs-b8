@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .text{
+            display: flex;
+            
+        }
+
+        .textA{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .textA__1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+            margin-bottom: 2%;
+            font-size: 14px; 
+        }
+        .textA__2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 60%;
+            font-size: 10px;
+        }
+
+        .sideB .textA__2{
+            font-size: 15px;
+        }
+        .sideB{
+            height: 250px;
+            width: 30%;
+            position: relative;
+            top: -474px;
+            left: 453px;
+            border: 3px solid black;
+            border-radius: 3%;
+        }
+        .btn{
+            position: absolute;
+            top: 267%;
+            left: 1%;
+        }
+        .sideB .btn {
+            position: absolute;
+            top: 67%;
+            left: 35%;
+        }
+        .pic__img{
+            height: 40%;
+            width: 55%;
+        }
+    </style>
+</head>
+<body>
+    <p class="ptag">Lorem.</p>
+    <h1>Lorem, ipsum dolor.</h1>
+
+    <picture class="pic">
+        <img class="pic__img" src="/public/img/download1.png" alt="photo">
+    </picture>
+
+    <div class="text">
+        <div class="textA">
+            <p class="textA__1">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="textA__2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, unde!s</p>
+        </div>
+        
+        <div class="textA">
+            <p class="textA__1">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="textA__2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, unde!s</p>
+        </div>
+        
+        <div class="textA">
+            <p class="textA__1">Lorem ipsum dolor sit amet consectetur.</p>
+            <p class="textA__2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, unde!s</p>
+        </div>
+    </div>
+
+        <div class="sideB">
+            <p class="textA__1">Lorem ipsum dolor sit amet.</p>
+            <p class="textA__2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam itaque veniam eius non? Deserunt soluta delectus quasi, nam repellendus veritatis!</p>
+            <button class="btn">read more</button>
+        </div>
+
+    <button class="btn">read more</button>
+
+</body>
+</html>
