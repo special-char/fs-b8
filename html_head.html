@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/img/compass-navigator-icon.svg" type="image/x-icon">
+    
+    <meta name="description" content="its about my portfolio">
+    <meta name="keywords" content="portfoloio">   
+    <meta name="twitter:card" content="summary"/>
+    <meta property="og:title" content="My Portfolio" />
+    <meta property="og:description" content="i am a developer" />  
+    <title>my portfolio</title>
+    
+</head>
+<body>
+    <h1>we are making my portfolio</h1>
+    <header>
+        <a href="#"><img src="/public/img/compass-navigator-icon.svg" alt="my" style="height: 125px; width: 125px;"></a>
+        <nav style="margin-left: 50px; position: relative; top: -117px; left:50px; ">
+
+            <ul>
+                <li><a href="#">header</a></li>
+                <li><a href="#formm">formm</a></li>
+                <li><a href="#main">main</a></li>
+                <li><a href="#footer">footer</a></li>
+            </ul>
+        </nav>  
+        <form id="formm">
+            <fieldset>
+                <legend>about you</legend>
+                <label for="name">name</label>
+                <input type="text" id="name" list="namel">
+                <datalist id="namel">
+                    <option value="y1">
+                    <option value="y2">
+                    <option value="y3">
+                </datalist>
+                
+                <br>
+
+                <label for="email">email</label>
+                <input type="email" id="email">
+
+                <br>
+
+                <label for="bday">birthday</label>
+                <input type="datetime-local" id="bday">
+
+                <br>
+                
+                <input type="color">
+                
+                <br>
+
+                <label>select your gender</label><br>
+                <input type="radio" id="male" name="gender"><label for="male">male</label>
+                <br>
+                <input type="radio" id="female" name="gender"><label for="female">female</label>
+
+                <br>
+
+                <label for="avt">select your Activity</label>
+                <br>
+                <select>
+                    <optgroup label="g">
+                        <legend>games</legend>
+                        <option value="g1">g1</option>
+                        <option value="g2">g2</option>
+                    </optgroup>
+                    <optgroup label="a">
+                        <legend> Activity</legend>
+                        <option value="a1">a1</option>
+                        <option value="a2">a2</option>
+                    </optgroup>
+                </select>
+                <meter min="0" max="100" value="70">50</meter>
+
+                <br>
+
+                <button type="submit">submit</button>
+            </fieldset>
+        </form>  
+    </header>
+    <hr>
+    <main id="main">
+        <img src="/public/img/download1.png" 
+        alt="phtot"
+        height="400px"
+        width="300px"
+        loading="lazy"s
+        > 
+    </main>
+
+    <footer id="footer">
+       <picture>
+        <!-- <source
+            srcset="/public/img/download2.jpg"
+            media="(min-width:450px)"
+        <source>
+        > -->
+            <img src="/public/img/download1.png" 
+            alt="phtot"
+            height="400px"
+            width="300px"
+            loading="eager"
+            >
+        </picture>                
+    </footer>
+</body>
+</html>
