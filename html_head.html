@@ -8,7 +8,7 @@
     
     <meta name="description" content="its about my portfolio">
     <meta name="keywords" content="portfoloio">   
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary" />
     <meta property="og:title" content="My Portfolio" />
     <meta property="og:description" content="i am a developer" />  
     <title>my portfolio</title>
@@ -22,22 +22,16 @@
 
             <ul>
                 <li><a href="#">header</a></li>
-                <li><a href="#formm">formm</a></li>
                 <li><a href="#main">main</a></li>
                 <li><a href="#footer">footer</a></li>
             </ul>
         </nav>  
-        <form id="formm">
+        <form>
             <fieldset>
                 <legend>about you</legend>
                 <label for="name">name</label>
-                <input type="text" id="name" list="namel">
-                <datalist id="namel">
-                    <option value="y1">
-                    <option value="y2">
-                    <option value="y3">
-                </datalist>
-                
+                <input type="text" id="name">
+
                 <br>
 
                 <label for="email">email</label>
@@ -48,10 +42,6 @@
                 <label for="bday">birthday</label>
                 <input type="datetime-local" id="bday">
 
-                <br>
-                
-                <input type="color">
-                
                 <br>
 
                 <label>select your gender</label><br>
@@ -64,22 +54,19 @@
                 <label for="avt">select your Activity</label>
                 <br>
                 <select>
-                    <optgroup label="g">
+                    <optgroup aria-valuemax="">
                         <legend>games</legend>
                         <option value="g1">g1</option>
                         <option value="g2">g2</option>
                     </optgroup>
-                    <optgroup label="a">
+                    <optgroup>
                         <legend> Activity</legend>
                         <option value="a1">a1</option>
                         <option value="a2">a2</option>
                     </optgroup>
                 </select>
-                <meter min="0" max="100" value="70">50</meter>
+                
 
-                <br>
-
-                <button type="submit">submit</button>
             </fieldset>
         </form>  
     </header>
