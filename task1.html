@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            background-color: rgb(41, 41, 94);
+        }
+        main{
+            display: flex;
+            flex-direction: row;
+        }
+        .text{
+            height: 100vh;
+            flex-grow: 1;
+            flex-shrink: 0;
+            display: flex;
+            flex-basis: 20vw;
+            flex-direction: column;
+        }
+        .o1{
+            font-size: xx-large;
+            color: aliceblue;
+            flex-grow: 1;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .o2{
+            flex-grow: 2;
+            flex-shrink: 0;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .o2 p{
+            color: purple;
+        } 
+        .o3{
+            flex-grow: 1;
+            flex-shrink: 0;
+            color: aliceblue;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        .photo{
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        .photo img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="text">
+            <div class="o1">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+            <div class="o2">Lorem <p>ipsum</p> dolor sit amet consectetur adipisicing elit. Illo id, hic porro mollitia laboriosam ratione velit, culpa molestias magnam nostrum nemo harum nesciunt non officiis.
+            </div>
+            <div class="o3">
+                <div class="o31">10k+ <br> companies</div>
+                <div class="o32">314 <br> templets</div>
+                <div class="o33">12M <br> queries</div>
+            </div>
+            </div>
+            <div class="photo">
+                <img src="/public/img/download1.png" alt="photo">
+            </div>
+    </main>
+</body>
+</html>
