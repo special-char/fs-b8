@@ -7,26 +7,31 @@
     <title>Document</title>
     <style>
         body{
+            height: 100vh;
             display: grid;
-            grid-template: "a1 l1 l1"30px  
-                           "a1 l2 l2"30px 
-                           "a1 l3 l3"30px;
+            gap: 1rem;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
         }
         .box1{
-            background-color: aqua;
-            grid-area: a1;
+            background-color: red;
+            grid-row:1/-1;
+            /* grid-row-start: 1;
+            grid-row-end: 4; */
         }
         .box2{
-            background-color: red;
-            grid-area: l1;
+            background-color: palevioletred;
+            grid-column:2/-1;
         }
         .box3{
-            background-color: green;
-            grid-area: l2;
+            background-color: purple;
+            grid-column:2/-1;
         }
         .box4{
-            background-color: yellow;
-            grid-area: l3;
+            background-color:gold;
+        }
+        .box5{
+            background-color:green;
         }
     </style>
 </head>
@@ -35,5 +40,6 @@
     <div class="box2">2</div>
     <div class="box3">3</div>
     <div class="box4">4</div>
+    <div class="box5">5</div>
 </body>
 </html>
