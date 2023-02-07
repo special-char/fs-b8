@@ -5,14 +5,16 @@
     <title>Hii</title>
 <style>
 .container {
-  width: 500px;
-  height: 400px;
+  
+  height: 100vh;
   background: rgb(1, 20, 1);
   display: grid;
-  grid-template-columns: 100px auto 100px;
-  grid-template-rows: 100px auto 100px;
+grid-template-columns: 100px 100px ;
+grid-template-rows: 100px 100px;
   padding: 0;
-  margin-left: 500px;
+  justify-content: space-between;
+  align-content: space-between;
+
 }
 
 .container div {
@@ -20,26 +22,22 @@
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-row-start: 1;
+  
   background-color: darkorange;
 }
 
 .box2 {
-  grid-column-start: 3;
-  grid-row-start: 1;
+  
   background-color: royalblue;
 }
 
 .box3 {
-  grid-column-start: 1;
-  grid-row-start: 3;
+  
   background-color: chartreuse;
 }
 
 .box4 {
-  grid-column-start: 3;
-  grid-row-start: 3;
+  
   background-color: blue;
 }
     </style>
