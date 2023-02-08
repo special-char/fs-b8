@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+
+      @media print {
+        .box {
+          background-color: yellow;
+        }
+      }
+
+      /* Mobile First approch */
+      /* @media screen and (min-width: 640px) {
+        .box {
+          background-color: coral;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .box {
+          background-color: gold;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .box {
+          background-color: violet;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+      }
+
+      @media screen and (min-width: 1536px) {
+      } */
+
+      @media screen and (max-width: 1536px) {
+      }
+
+      @media screen and (max-width: 1280px) {
+      }
+
+      @media screen and (max-width: 1024px) {
+        .box {
+          background-color: violet;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .box {
+          background-color: gold;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        .box {
+          background-color: gold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

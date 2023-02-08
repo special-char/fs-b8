@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <style>
       .wrapper {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* gap: 10px; */
+        align-content: flex-start;
         /* works on x axis  when flex direction is row */
         /* works on y axis  when flex direction is column */
-        justify-content: center;
+        /* justify-content: center; */
         /* works on y axis  when flex direction is row  */
         /* works on x axis  when flex direction is column  */
-        align-items: stretch;
+        /* align-items: stretch; */
         height: 100vh;
         background-color: yellow;
         /* flex-wrap: wrap; */
@@ -23,7 +29,28 @@
       .box {
         height: 100px;
         /* width: 100px; */
-        background-color: red;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 200px;
+        /* background-color: red; */
+      }
+
+      .box:nth-child(1) {
+        /* order: 3; */
+        background-color: violet;
+        /* align-self: center; */
+      }
+
+      .box:nth-child(2) {
+        /* order: 4; */
+        /* flex-grow: 1; */
+        background-color: coral;
+      }
+
+      .box:nth-child(3) {
+        /* order: 1; */
+        /* flex-grow: 2; */
+        background-color: gold;
       }
     </style>
   </head>
@@ -32,8 +59,7 @@
       <div class="box">Item 1</div>
       <div class="box">Item 2</div>
       <div class="box">Item 3</div>
-      <!-- <div class="box">Item 4</div>
-      <div class="box">Item 5</div>
+      <!-- <div class="box">Item 5</div>
       <div class="box">Item 6</div>
       <div class="box">Item 7</div>
       <div class="box">Item 8</div>
