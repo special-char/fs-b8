@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        /* body{
             height: 100vh;
             display: grid;
             gap: 1rem;
@@ -16,12 +16,10 @@
         .box1{
             background-color: red;
             grid-row:1/-1;
-            /* grid-row-start: 1;
-            grid-row-end: 4; */
         }
         .box2{
             background-color: palevioletred;
-            grid-column:2/-1;
+            grid-column:2/-1 ;
         }
         .box3{
             background-color: purple;
@@ -33,13 +31,43 @@
         .box5{
             background-color:green;
         }
+        */
+        .wraper{
+            display: grid;
+            width: 50vw;
+            grid-template-columns: 1fr auto;
+        }
+        .input{
+            grid-column: 1/ -1;
+            grid-row: 1/ -1;
+            padding: 2rem 3rem;
+            font-size: 2rem;
+            border: 2px solid black;
+            border-radius: 50px;
+        } 
+        .btn{
+            margin: 10px 10px;
+            grid-column: 2/ -1;
+            grid-row: 1/ -1;
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
-    <div class="box1">1</div>
+    
+    <!-- <div class="box1">1</div>
     <div class="box2">2</div>
     <div class="box3">3</div>
     <div class="box4">4</div>
-    <div class="box5">5</div>
+    <div class="box5">5</div> -->
+
+    <div class="wraper">
+        <input type="text" class="input">
+        <button type="submit" class="btn">submit</button>
+    </div>
+
 </body>
 </html>
