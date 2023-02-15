@@ -6,6 +6,7 @@ module.exports = {
       sans: ["SF Pro Display"],
     },
     colors: {
+      white: "#fff",
       "primary-text": "#303030",
       "secondary-text": "#222222",
     },

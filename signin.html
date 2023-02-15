@@ -45,7 +45,7 @@
         }
       } */
 
-      /* main {
+      main {
         height: 100vh;
       }
       dialog {
@@ -106,7 +106,7 @@
       .social-buttons > button {
         flex: 1;
         background-color: #f5d9b1;
-      } */
+      }
     </style>
     <script>
       tailwind.config = {
@@ -117,6 +117,7 @@
           colors: {
             "primary-text": "#303030",
             "secondary-text": "#222222",
+            white: "#fff",
           },
         },
       };
@@ -155,5 +156,19 @@
         <p>Already have an account? <a href="#">Login</a></p>
       </dialog>
     </main>
+    <!-- <dialog
+      id="success"
+      open
+      class="fixed h-screen w-screen bg-primary-text bg-opacity-40 grid place-items-center"
+    >
+      <div
+        class="bg-white w-full max-w-md flex flex-col items-center rounded-lg"
+      >
+        <img src="./assets/images/success.png" alt="success" />
+        <h1>Enrolled Successfully</h1>
+        <p>You successfully enrolled in the course</p>
+        <button>Start Session</button>
+      </div>
+    </dialog> -->
   </body>
 </html>
