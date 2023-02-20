@@ -5,7 +5,7 @@ body{
     display: grid;
     grid-template-rows: 20% 60% 20%;
 
-    font-family: 'General Sans';
+    font-family:sans-serif;
     font-style: normal;
 }
 header{
@@ -37,8 +37,6 @@ footer{
     grid-template-columns: 1fr 1fr;
 }
 .probar{
-
-    margin-right: 50%;
 
     flex-grow: 1;
 
@@ -110,4 +108,10 @@ main > p {
 }
 input{
     display: none; 
+}
+meter{
+
+    width: 200px;
+    height: 30px;
+    align-self: center;
 }
