@@ -1,0 +1,113 @@
+body{
+    height: 95vh;
+    width: 95vw;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+
+    font-family: 'General Sans';
+    font-style: normal;
+}
+header{
+    background-color: #E5E5E5;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+.boxl{
+    padding: 5px;
+    background-color: white;
+    border-radius: 10%; 
+}
+.boxt{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+.boxcan{
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+.rbtn{
+    margin-bottom: 3%;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.probar{
+
+    margin-right: 50%;
+
+    flex-grow: 1;
+
+    display: flex;
+    align-self: center;
+    justify-self: end;
+}
+.ctn{
+
+    margin-left: 20%;
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-items: start;
+}
+.cmbtn{
+    background-color: #747475;
+    color: wheat;
+    width: 240px;
+    height: 60px;
+    opacity: 0.5;
+    border-radius: 8px;
+}
+main{
+    background-color: #E5E5E5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+}
+main > p {
+    color: #191D63;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 150px;
+}
+.rbox{
+
+    width: 510px;
+    height: 81px;
+
+    display: flex;
+    background: #F4F3F6;
+    border-radius: 8px;
+    align-items: center;
+
+    cursor: pointer;
+}
+.rbox p{
+    padding: 5px 20px;
+}
+.dbox{
+    height: 50px;
+    width: 50px;
+    background-color: #EDE8E3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+}
+input{
+    display: none; 
+}

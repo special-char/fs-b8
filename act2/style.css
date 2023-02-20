@@ -1,0 +1,35 @@
+.main{
+
+    margin: 2% 2%;
+
+    position: absolute;
+
+    border: 1px solid black;
+    width: 90vw;
+
+    display: flex;
+    justify-items: center;
+}
+.imgtag{
+    flex-grow: 30%;
+}
+
+.form{
+
+    max-width: 70%;
+
+    padding: 5%;
+
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+

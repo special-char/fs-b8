@@ -5,148 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            height: 95vh;
-            width: 95vw;
-            border: 2px solid black;
-            display: grid;
-            grid-template-rows: 20% 60% 20%;
-
-            font-family: 'General Sans';
-            font-style: normal;
-        }
-        header{
-            background-color: #E5E5E5;
-            place-items: center;
-            display: grid;
-            grid-template-columns: 10% 80% 10%;
-        }
-        .boxl{
-            padding: 5px;
-            background-color: white;
-            border-radius: 10%; 
-        }
-        .boxt{
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 24px;
-        }
-        .boxcan{
-            padding: 5px;
-            background-color: white;
-            border-radius: 50%;
-        }
-        .rbtn{
-            margin-bottom: 3%;
-        }
-        footer{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .probar{
-
-            margin-right: 50%;
-
-            flex-grow: 1;
-
-            display: flex;
-            align-self: center;
-            justify-self: end;
-        }
-        .ctn{
-
-            margin-left: 20%;
-
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-items: start;
-        }
-        .cmbtn{
-            background-color: #747475;
-            color: wheat;
-            width: 240px;
-            height: 60px;
-            opacity: 0.5;
-            border-radius: 8px;
-        }
-        main{
-            background-color: #E5E5E5;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-             
-            font-weight: 600;
-            font-size: 28px;
-            line-height: 38px;
-        }
-        main > p {
-            color: #191D63;
-        }
-        .inputsf{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .boxin{
-            display: flex;
-            gap: 20px; 
-            background-color: #F4F3F6;
-
-            display: flex;
-        }
-        .boxin > span{
-            margin-left: 15px;
-            padding: 10px ;
-            border-radius: 50%;
-            background-color: #EDE8E3;
-        }
-        .in{
-            cursor: pointer;
-            padding: 10px 20px;
-        }
-        input{
-            display: none;
-        }
-        #fora:checked ~ .in1
-        #forb:checked ~ .in2
-        #forb:checked ~ .in3{
-            background-color: aqua;
-        } 
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <header>
             <div class="boxl ">
-                <img src="/img/Group 12.png" alt="log">
+                <img src="/act1/img/Group 12.png" alt="log">
             </div>
             <div class="boxt">Fantasy Quiz #156</div>
             <div class="boxcan">
-                <img src="/img/Outline.png" alt="cancel">
+                <img src="/act1/img/Outline.png" alt="cancel">
             </div>
         </header>
         <main>
             <p>PREDICT THE TOP LOSER (for tomorrow) across these indices</p><br>
-            <div class="inputsf">
-                    <div class="boxin in1">
-                    <input type="radio" name="same" id="fora" class="inputs">
-                    <span>a</span>
-                    <label for="fora" class="in in1">NIFTY50  ₹ 17,356, -0.31%</label>
-                    </div>    
-                
-                    <div class="boxin">
-                        <input type="radio" name="same" id="forb" class="inputs">
-                        <span>b</span>
-                        <label for="forb" class="in in1">NIFTYNEXT50 ₹56,226, -0.31%</label>
-                    </div>
-                
-                    <div class="boxin">
-                    <input type="radio" name="same" id="forc" class="inputs">
-                    <span>c</span>
-                    <label for="forc" class="in in1">NIFTYBANK ₹ 17,356, +2.12%</label>
-                    </div>
-
+            <div class="inputs">
+                <div class="rbox">
+                    <span class="dbox" style="align-self: center;">A</span>
+                    <input type="radio" name="all">
+                    <p>NIFTY50&nbsp;&nbsp;₹ 17,356,-0.31%</p>
+                </div>
+                <div class="rbox">
+                    <span class="dbox" style="align-self: center;">B</span>
+                    <input type="radio" name="all">
+                    <p>NIFTYNEXT50&nbsp;&nbsp;₹56,226,-0.31%</p>
+                </div>
+                <div class="rbox">
+                    <span class="dbox" style="align-self: center;">C</span>
+                    <input type="radio" name="all">
+                    <p>NIFTYBANK&nbsp;&nbsp;₹17,356,+2.12%</p>
+                </div>
             </div>
         </main>
         <footer>
