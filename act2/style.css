@@ -1,35 +1,43 @@
-.main{
+.main {
+  margin: 2% 2%;
 
-    margin: 2% 2%;
+  position: absolute;
 
-    position: absolute;
+  border: 1px solid black;
+  width: 90vw;
+  max-height: 95vh;
 
-    border: 1px solid black;
-    width: 90vw;
-
-    display: flex;
-    justify-items: center;
+  display: flex; 
+  justify-items: center;
 }
-.imgtag{
-    flex-grow: 30%;
+.imgtag {
+  flex-grow: 30%;
 }
 
 .form{
 
-    max-width: 70%;
+    width: 1100px;
 
-    padding: 5%;
+    box-sizing: border-box;
 
-    flex-grow: 2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .fbox{
+
+    padding-left: 200px;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:25% 25% 50%;
+    grid-template-rows:  1fr 1fr 1fr;
+
 }
+.inbox{
+    grid-column: 1/-1;
+}
+
+
+
 
 

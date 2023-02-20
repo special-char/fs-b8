@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="imgtag">
-        <img src="/act2/img/bg-main-desktop.png" alt="">
-        <img src="/act2/img/bg-card-back.png" alt="card" style="position: absolute; top: 7%; left: 10%;">
-        <img src="/act2/img/bg-card-back.png" alt="card"style="position: absolute; top: 48%; left: 17%;">
-        </div>
+      <div class="imgtag">
+        <img src="/act2/img/bg-main-desktop.png" alt="" />
+        <img
+          src="/act2/img/bg-card-back.png"
+          alt="card"
+          style="position: absolute; top: 7%; left: 10%"
+        />
+        <img
+          src="/act2/img/bg-card-back.png"
+          alt="card"
+          style="position: absolute; top: 48%; left: 17%"
+        />
+      </div>
 
-        <div class="form">
-            <form action="#">
-                <div class="fbox">
-                    <div class="inbox" style="grid-column: 1/-1;">
-                        <label for="name">CARDHOLDER NAME</label><br>
-                        <input type="text" id="name" placeholder="NAME">
-                    </div>
-                    <div class="inbox" style="grid-column: 1/-1;">
-                        <label for="number">CARD NUMBER</label><br>
-                        <input type="number" id="number" placeholder="NUMBER">
-                    </div>
-                    <div class="inbox">
-                        <label for="exdd">EXP. DATE</label><br>
-                        <input type="text" id="exdd" placeholder="DD">
-                    </div>
-                    <div class="inbox">
-                        <label for="exyy">(MM/YY)</label><br>
-                        <input type="text" id="exyy" placeholder="YY">
-                    </div>
-                    <div class="inbox">
-                        <label for="cvc">CARDHOLDER NAME</label><br>
-                        <input type="text" id="cvc" placeholder="NAME">
-                    </div>
-                    <button class="sbtn" style="grid-column: 1/-1;"></button>
-                </div>
-            </form>
-        </div>
+      <div class="form">
+          <form action="#">
+            <div class="fbox">
+              <div class="inbox" style="grid-column: 1/-1">
+                <label for="name">CARDHOLDER NAME</label><br />
+                <input type="text" id="name" placeholder="NAME" />
+              </div>
+              <div class="inbox" style="grid-column: 1/-1">
+                <label for="number">CARD NUMBER</label><br />
+                <input type="number" id="number" placeholder="NUMBER" />
+              </div>
+              <div class="inbox">
+                <label for="exdd">EXP. DATE</label><br />
+                <input type="text" id="exdd" placeholder="DD" />
+              </div>
+              <div class="inbox">
+                <label for="exyy">(MM/YY)</label><br />
+                <input type="text" id="exyy" placeholder="YY" />
+              </div>
+              <div class="inbox">
+                <label for="cvc">CVC</label><br />
+                <input type="text" id="cvc" placeholder="NAME" />
+              </div>
+              <button class="sbtn" style="grid-column: 1/-1"></button>
+            </div>
+          </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
