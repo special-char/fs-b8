@@ -115,3 +115,9 @@ meter{
     height: 30px;
     align-self: center;
 }
+aside{
+    height: 100px;
+    width: 100px;
+    /* background-color: red; */ 
+
+}
