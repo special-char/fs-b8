@@ -1,0 +1,102 @@
+dialog {
+  position: fixed;
+  bottom: 0;
+  width: auto;
+  background-color: #ffedd7;
+
+  border-radius: 25px 25px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo-image {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title {
+  text-transform: uppercase;
+}
+#login {
+  width: 100%;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+.form-item input {
+  background-color: #f5d9b1;
+  border: 1px solid #c2b1f5;
+  border-radius: 7px;
+  height: 54px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 16px;
+}
+
+form button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  position: relative;
+  width: 100%;
+  height: 56px;
+  top: 10px;
+  background: #ff7034;
+  border-radius: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 80%;
+}
+.divider .divider__line {
+  height: 1px;
+  background-color: #6c6c6c;
+  flex: 1;
+}
+
+/* .social_btn button {
+   background-color: #f5d9b1;
+  height: 52px;
+  width: 178px;
+  border-radius: 10px;
+  flex-direction: row-reverse;
+}
+.social_btn img {
+  height: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  bottom: 71px;
+
+} */
+.btn-group .btn-active {
+  height: 52px;
+  width: 178px;
+  left: 25px;
+  top: 824px;
+  border-radius: 7px;
+  background-color: #f5d9b1;
+  border-color: #f5d9b1;
+}
+.btn-group .btn {
+  height: 52px;
+  width: 178px;
+  left: 25px;
+  top: 824px;
+  border-radius: 7px;
+  background-color: #f5d9b1;
+  border-color: #f5d9b1;
+}
