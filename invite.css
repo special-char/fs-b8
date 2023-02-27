@@ -1,0 +1,21 @@
+dialog {
+    position: absolute;
+    width: 388px;
+    height: 563px;
+    left: 13px;
+    top: 189px;
+    background: #FFEDD7;
+    box-shadow: 0px -10px 40px rgba(2, 4, 6, 0.26);
+    border-radius: 13px;
+}
+
+.home h1 {
+    position: absolute;
+    height: 48px;
+    left: 34px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #303030;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <main>
+        <dialog open>
+            <div class="login">
+                <h1>Fill Your Details </h1>
+
+
+            </div>
+            <form>
+                <div class="gen">
+                    <div>
+                        <p>gendr</p>
+                        <input type="radio" name="gender" id="male" />
+                        <label for="male" class="male">Male</label>
+                        <input type="radio" name="gender" id="female" />
+                        <label for="female" class="female">Female</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="label" for="name">Name</label> 
+                    <input type="text" name="name" class="input" placeholder="Enter your Name">
+
+                </div>
+                <div>
+                    <label class="label" for="email">Email</label> 
+                    <input type="email" name="email" class="input" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label class="label" for="password">password</label> 
+                    <input type="password" name="password" class="input" placeholder="Enter your password">
+                </div>
+
+
+            </form>
+            <p>By Signing in , I agree to <B>Terms & Condition</B>  </p>
+            <div class="button">
+               <button>send otp</button> 
+            </div>
+        </dialog>
+
+    </main>
+
+
+
+
+</body>
+
+</html>

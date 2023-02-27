@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+nav
+{
+    background-color: thistle;
+}
+/* .header-main-wrap ul li{
+    display: inline-block;
+    color: antiquewhite;
+} */
+nav ul{
+    text-align: center;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: orangered;
+}
+.nav ul li{
+    display: inline-block;
+    padding: 20px;
+    color: aqua;
+}
+nav ul li :hover{
+    background-color: seashell;
+}

@@ -1,0 +1,57 @@
+*{
+    padding: o;
+    margin: o;
+    box-sizing: border-box;
+}    
+.container{
+     width: 100vw;
+     height: 100vh;
+     background:whitesmoke;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+      
+}
+.task{
+    width: 70vw;
+    background: hsl(244, 38%, 16%);
+    border-radius: 7px;
+    display: flex;
+}
+.task .card{
+    padding: 4rem;
+    width: 50%;
+
+}
+.task .card h1{
+    font-size: 2rem;
+    color: violet;
+    font-weight: 700;
+}
+.task .card p{
+    color: greenyellow;
+    margin: 1.5rem 0 3rem 0;
+}
+.dap{
+    display: flex;
+    justify-content: space-between;
+}
+.dap .number{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: coral;
+}
+.dap .name{
+    text-transform: uppercase;
+    color: coral;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+.task .card-image{
+    border-radius: 0 7px 7px 0;
+    width: 50%;
+    background: url(./public1/task\ -image.jpg) center no-repeat;
+    background-size: cover;
+}
+
+

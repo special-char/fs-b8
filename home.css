@@ -1,0 +1,60 @@
+dialog {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: 13px;
+    top: 262px;
+    background: #FFEDD7;
+    box-shadow: 0px -10px 40px rgba(2, 4, 6, 0.26);
+    border-radius: 13px;
+
+}
+
+.success img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 25px;
+}
+
+
+.success h1 {
+    height: 30px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 50%;
+    color: #22172A;
+    margin-top: 10px;
+}
+
+.success p {
+    width: 221px;
+    height: 24px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #22172A;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.success .btn1 {
+    height: 50px;
+    width: 225px;
+    background-color: #ff7136;
+    display: flex;
+    border-radius: 5px;
+    border-color: black;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+
+}

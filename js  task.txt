@@ -1,0 +1,29 @@
+// const firstname = 'dharmi';
+// const lastname = 'patel';
+// const result = `my name is ${firstname} ${lastname}`;
+// console.log(result);
+// const variable = 2;
+// const message = `your order of ${variable} has been recevied`;
+// console.log(message);
+// const message = `the roses are red 
+// violet are blue
+// suger is sweet
+// and so are you`
+// console.log(message);
+// function sum(a,b){
+//     return a+b;
+// }
+// console.log(sum(1,2));
+// function strlength(str) {
+//     return str.length
+    
+// }
+// console.log(strlength("hello dharmi"));
+// function checkoddeven(number) {
+//     if(number % 2 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// console.log(checkoddeven(2));
