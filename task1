@@ -1,0 +1,60 @@
+// const firstName = "Yagnesh";
+// const lastName = "Modh";
+
+// const result = `My name is ${firstName} ${lastName}`;
+
+// console.log(result);
+
+// const varianble = 2;
+
+// const message = `your order of ${varianble} has been recieved`;
+
+// console.log(message);
+
+// const message = `The Roses are red
+// Violet are blue
+// suger is sweet
+// and so are you`
+
+// console.log(message);
+
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum(1, 2));
+
+function strLength(str) {
+  return str.length;
+}
+
+console.log(strLength("our order of ${varianble} has been recieved"));
+
+function checkOddEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  }
+  return false;
+}
+
+console.log(checkOddEven(10));
+
+const obj = {
+  a: 1,
+  b: 2,
+};
+
+const obj1 = {
+  c: 3,
+  d: 4,
+};
+
+function mergeObj(data, data1) {
+  console.log(data);
+  console.log(data1);
+  return { ...data, ...data1 };
+}
+
+console.log(mergeObj(obj, obj1));
+
+console.log(obj);
