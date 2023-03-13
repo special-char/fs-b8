@@ -1,9 +1,0 @@
-1. add rendom text
-2. commit the text
-
-3. change in this file
-4. commit the text
-
-
-5. write a command to check history
-6. restore the data from the second last commit
