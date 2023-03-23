@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            /* height: 200vh; */
+        }
+
+        dialog {
+            position: absolute;
+            width: 414px;
+            height: 406px;
+            left: 0px;
+            top: 535px;
+
+            background: #FFEDD7;
+            box-shadow: 0px -10px 40px rgba(2, 4, 6, 0.26);
+            border-radius: 25px 25px 0px 0px;
+        }
+
+        .logo-wrapper {
+            position: absolute;
+            width: 46px;
+            height: 45px;
+            left: 122px;
+            top: 570px;
+        }
+
+        .logo-wrapper>.wrapper__img {
+            height: 44px;
+            width: 44px;
+        }
+
+        .logo-wrapper>.logo-wrapper__title {
+            text-transform: uppercase;
+        }
+
+        .title {
+            position: absolute;
+            width: 103px;
+            height: 48px;
+            left: 25px;
+            top: 633px;
+        }
+
+
+
+        .btn {
+
+
+            position: absolute;
+            width: 364px;
+            height: 56px;
+            left: 25px;
+            top: 805px;
+
+            background: #FF7034;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <dialog>
+            <div class="logo-wrapper">
+                <img class="wrapper__img " src="./public/icon/WhatsApp Image 2023-01-09 at 12.51 1.png" alt="logo" />
+                <p class="logo-wrapper__title">Veducation</p>
+            </div>
+            <section id="otp">
+                <h1 class="title">Enter OTP</h1>
+                <from>
+                    <div>
+                        <label for="textotp"></label>
+                        <input type="text" id="Otp" />
+                        <button>Resend OTP</button>
+                    </div>
+                    <div>
+                        <button class="btn">Continue</button>
+                    </div>
+
+
+
+
+
+                </from>
+
+            </section>
+        </dialog>
+    </main>
+</body>
+
+</html>
