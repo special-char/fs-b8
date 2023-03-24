@@ -1,5 +1,6 @@
-const data = require('./app')
+import './styles/global.css'
 
+const data = require('./app')
 // hello
 
 const user = {
