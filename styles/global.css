@@ -1,9 +1,9 @@
-p {
+/* p {
   display: grid;
   transition: all 0.5s;
   user-select: none;
   background: linear-gradient(to bottom, white, black);
-}
+} */
 
 .title {
   background-color: red;
@@ -22,4 +22,10 @@ p {
   font-size: 16px;
   line-height: 154.3%;
   margin: 10px;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  font-weight: 500;
 }

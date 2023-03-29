@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import { createRoot } from 'react-dom/client'
 import Button from './components/Button'
 import '../styles/global.css'
+import Xyz from './components/Input'
+import Input from './components/Input'
 
 // first letter of element should be capital letter
 // return single element from component
@@ -21,7 +23,24 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
   <>
-    <Button text="Sign In" />
+    <Button text="Learn" number={10} />
     <Button text="Sign Up" />
+    <Input
+      id="firstName"
+      name="firstName"
+      placeholder="First Name"
+      autoComplete="given-name"
+    />
+
+    <Input
+      id="lastName"
+      name="lastName"
+      placeholder="Last Name"
+      autoComplete="family-name"
+      type="password"
+      error="Something went wrong..."
+    />
+
+    <Input name="isMarried" type="checkbox" />
   </>,
 )
