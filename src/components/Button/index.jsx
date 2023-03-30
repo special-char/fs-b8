@@ -7,7 +7,11 @@ function Button({ text, number }) {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.bool,
+}
+
+Button.defaultProps = {
+  number: 0,
 }
 
 export default Button
