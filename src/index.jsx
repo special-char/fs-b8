@@ -4,6 +4,7 @@ import Button from './components/Button'
 import '../styles/global.css'
 import Xyz from './components/Input'
 import Input from './components/Input'
+import CloseIcon from '../assets/icons/close.svg'
 
 // first letter of element should be capital letter
 // return single element from component
@@ -23,8 +24,10 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
   <>
-    <Button text="Learn" number={10} />
-    <Button text="Sign Up" />
+    <Button text="Learn" disabled />
+    <Button text="Learn" icon={CloseIcon} />
+    <Button text="Learn" variant="outline" icon={CloseIcon} />
+    <Button text="Learn" variant="outline" disabled />
     <Input
       id="firstName"
       name="firstName"

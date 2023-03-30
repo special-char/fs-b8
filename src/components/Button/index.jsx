@@ -1,17 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Button({ text, number }) {
-  return <button className="btn">{`${text} ${number}`}</button>
+function Button({ text, variant, icon: Icon, ...rest }) {
+  return (
+    <button type="button" className={`btn ${variant}`} {...rest}>
+      {Icon && <Icon height={24} width={24} />}
+      {text && <span>{text}</span>}
+    </button>
+  )
 }
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  number: PropTypes.bool,
+  variant: PropTypes.oneOf(['fill', 'outline']),
+  icon: PropTypes.node,
 }
 
 Button.defaultProps = {
-  number: 0,
+  variant: 'fill',
+  icon: undefined,
 }
 
 export default Button

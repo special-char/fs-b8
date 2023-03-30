@@ -11,17 +11,51 @@
 }
 
 .btn {
-  background-color: #ffac30;
-  padding: 12px 0;
-  width: 100%;
-  border-radius: 10px;
+  padding: 20px 0;
   border: none;
-  color: #212330;
+  width: 100%;
+  border-radius: 32px;
+  margin: 10px 0;
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 154.3%;
-  margin: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.007em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn.fill {
+  background-color: #f8c700;
+  color: #ffffff;
+}
+
+.btn.fill svg {
+  fill: #ffffff;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #f8c700;
+  border: 2px solid #f8c700;
+}
+
+.btn.outline svg {
+  fill: #f8c700;
+}
+
+.btn.fill:disabled {
+  background-color: #f4f5f7;
+  color: #2e3e5c;
+}
+
+.btn.outline:disabled {
+  color: #2e3e5c;
+  border: 2px solid #d0dbea;
 }
 
 .error {
