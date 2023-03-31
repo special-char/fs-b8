@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: center;
 
-    height: 100vh;
+    height: max-content;
     padding-top: 7rem;
     overflow: hidden;
 }
