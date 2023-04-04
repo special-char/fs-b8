@@ -23,7 +23,7 @@ import CloseIcon from '../assets/icons/close.svg'
 const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
-  <>
+  <div>
     <Button text="Learn" disabled />
     <Button text="Learn" icon={CloseIcon} />
     <Button text="Learn" variant="outline" icon={CloseIcon} />
@@ -45,5 +45,5 @@ root.render(
     />
 
     <Input name="isMarried" type="checkbox" />
-  </>,
+  </div>,
 )

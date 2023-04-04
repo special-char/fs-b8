@@ -1,65 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+  }
+
+  p {
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-sans py-5 border-none w-full rounded-4xl my-3 font-bold text-base text-center flex items-center justify-center gap-2 tracking-[0.007em];
+
+    &.fill {
+      @apply bg-primary text-white;
+
+      & svg {
+        @apply fill-white;
+      }
+
+      &:disabled {
+        @apply bg-form text-text1;
+
+        & svg {
+          /* @apply fill-[#2e3e5c]; */
+        }
+      }
+    }
+
+    &.outline {
+      @apply bg-transparent text-primary border-[2px] border-primary;
+
+      &:disabled {
+        @apply bg-text1 border-[2px] border-outline;
+      }
+
+      & svg {
+        @apply fill-primary;
+      }
+    }
+  }
+
+  .input-wrapper {
+    @apply grid items-center;
+    grid-template-columns: 24px 24px 1fr 24px 24px;
+
+    & > .prefix-icon {
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+    }
+
+    & > .input {
+      @apply w-full rounded-4xl border-outline border py-5 row-span-full col-span-full -z-10 px-14;
+    }
+
+    & > .sufix-icon {
+      grid-column: -3 / -2;
+      grid-row: 1 / -1;
+    }
+  }
+
+  .title {
+    background-color: red;
+    color: white;
+  }
+
+  .error {
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+}
+
 /* p {
   display: grid;
   transition: all 0.5s;
   user-select: none;
   background: linear-gradient(to bottom, white, black);
 } */
-
-.title {
-  background-color: red;
-  color: white;
-}
-
-.btn {
-  padding: 20px 0;
-  border: none;
-  width: 100%;
-  border-radius: 32px;
-  margin: 10px 0;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: 0.007em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.btn.fill {
-  background-color: #f8c700;
-  color: #ffffff;
-}
-
-.btn.fill svg {
-  fill: #ffffff;
-}
-
-.btn.outline {
-  background-color: transparent;
-  color: #f8c700;
-  border: 2px solid #f8c700;
-}
-
-.btn.outline svg {
-  fill: #f8c700;
-}
-
-.btn.fill:disabled {
-  background-color: #f4f5f7;
-  color: #2e3e5c;
-}
-
-.btn.outline:disabled {
-  color: #2e3e5c;
-  border: 2px solid #d0dbea;
-}
-
-.error {
-  font-size: 12px;
-  color: red;
-  font-weight: 500;
-}

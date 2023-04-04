@@ -1,21 +1,24 @@
 import React from 'react'
+import CloseIcon from '../../../assets/icons/close.svg'
 
 function Input({ id, placeholder, error, ...props }) {
   console.log(props)
   return (
     <div>
-      <label htmlFor={id}>{placeholder}</label>
-      <input
-        id={id}
-        placeholder={placeholder}
-        style={{
-          padding: '10px 4px',
-          margin: '1rem',
-          width: '100%',
-        }}
-        type="text"
-        {...props}
-      />
+      <label className="sr-only" htmlFor={id}>
+        {placeholder}
+      </label>
+      <div className="input-wrapper">
+        <CloseIcon height={24} width={24} fill="red" className="prefix-icon" />
+        <input
+          id={id}
+          placeholder={placeholder}
+          className="input"
+          type="text"
+          {...props}
+        />
+        <CloseIcon height={24} width={24} fill="red" className="sufix-icon" />
+      </div>
       {error && <p className="error">{error}</p>}
     </div>
   )
