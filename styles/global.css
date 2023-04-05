@@ -50,15 +50,17 @@
     & > .prefix-icon {
       grid-column: 2 / 3;
       grid-row: 1 / -1;
+      z-index: 1;
     }
 
     & > .input {
-      @apply w-full rounded-4xl border-outline border py-5 row-span-full col-span-full -z-10 px-14;
+      @apply w-full rounded-4xl border-outline border py-5 row-span-full col-span-full px-14;
     }
 
     & > .sufix-icon {
       grid-column: -3 / -2;
       grid-row: 1 / -1;
+      z-index: 1;
     }
   }
 
