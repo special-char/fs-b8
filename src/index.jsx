@@ -7,6 +7,7 @@ import Input from './components/Input'
 import CloseIcon from '../assets/icons/close.svg'
 import LockIcon from '../assets/icons/lock.svg'
 import ShowIcon from '../assets/icons/show.svg'
+import Try from './components/try'
 
 // first letter of element should be capital letter
 // return single element from component
@@ -67,5 +68,7 @@ root.render(
       prefixIcon={LockIcon}
       suffixIcon={ShowIcon}
     />
+
+    <Try/>
   </div>,
 )
