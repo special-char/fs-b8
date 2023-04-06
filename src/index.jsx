@@ -7,6 +7,7 @@ import Input from './components/Input'
 import CloseIcon from '../assets/icons/close.svg'
 import LockIcon from '../assets/icons/lock.svg'
 import ShowIcon from '../assets/icons/show.svg'
+import App from './App'
 
 // first letter of element should be capital letter
 // return single element from component
@@ -43,29 +44,4 @@ import ShowIcon from '../assets/icons/show.svg'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
-root.render(
-  <div>
-    <div>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-      <p className="text">Lorem, ipsum dolor.</p>
-    </div>
-
-    <Button text="Learn" disabled />
-    <Button text="Learn" icon={CloseIcon} />
-    <Button text="Learn" variant="outline" icon={CloseIcon} />
-    <Button text="Learn" variant="outline" disabled />
-    <Input
-      id="firstName"
-      name="firstName"
-      placeholder="First Name"
-      autoComplete="given-name"
-      prefixIcon={LockIcon}
-      suffixIcon={ShowIcon}
-    />
-  </div>,
-)
+root.render(<App />)
