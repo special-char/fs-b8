@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Child2 = () => {
-  return <div>Child2</div>
+  return <div>
+    hy
+  </div>
 }
 
 export default Child2
