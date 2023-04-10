@@ -13,8 +13,6 @@ import Child2 from './Child2'
 
 // Error
 
-const greet = 'hello'
-
 // Child1.getDerivedStateFromProps = (nextProps, prevState) => {
 //   return {
 //     username: `${greet} ${nextProps.name}`,
@@ -27,8 +25,7 @@ class App extends Component {
   }
 
   render() {
-    
-    console.log('aC');
+    console.log('aC')
     return (
       <div>
         <p>{this.state.name}</p>
