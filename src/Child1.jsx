@@ -1,5 +1,6 @@
-import React, { Component  } from 'react'
+import React, { Component } from 'react'
 import shallowCompare from 'react-addons-shallow-compare'
+
 export default class Child1 extends Component {
   state = {
     username: '',
@@ -41,19 +42,19 @@ export default class Child1 extends Component {
     })
   }
 
-    shouldComponentUpdate(nextProps,nextState){
-/*       if (this.props!== nextProps || this.state!== nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
+    /* if (this.props!== nextProps || this.state!== nextState) {
         return true
-      } */ 
-      
-      return shallowCompare(this, nextProps, nextState) 
-    }
+      } */
+
+    return shallowCompare(this, nextProps, nextState)
+  }
 
   render() {
     /* console.log('render')
     console.log('render', document.getElementById('title')) */
-    
-    console.log('c1C');
+
+    console.log('c1C')
     return (
       <div>
         {/* <h1 style={{ color: 'red' }} id="title">
