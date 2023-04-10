@@ -1,18 +1,7 @@
-import React, { Component } from 'react'
+import React, { memo } from 'react'
 
-export default class Child2 extends Component {
-  
-  shouldComponentUpdate(props, state){
-    return false
-  }
-
-
-  
-  render() {
-    
-    console.log('c2C');
-    return (
-      <div>Child2</div>
-    )
-  }
+function Child2() {
+  return <div>hy</div>
 }
+
+export default memo(Child2)
