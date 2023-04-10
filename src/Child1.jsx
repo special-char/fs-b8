@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component  } from 'react'
+import shallowCompare from 'react-addons-shallow-compare'
 export default class Child1 extends Component {
   state = {
     username: '',
@@ -12,16 +12,16 @@ export default class Child1 extends Component {
     //   username: props.name,
     // }
     // api call
-    console.log('constructor')
-    console.log('constructor', document.getElementById('title'))
+    /* console.log('constructor')
+    console.log('constructor', document.getElementById('title')) */
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('nextProps', nextProps)
+  static getDerivedStateFromProps(props, state) {
+    /* console.log('nextProps', nextProps)
     console.log('prevState', prevState)
-    console.log('getDerivedStateFromProps', document.getElementById('title'))
+    console.log('getDerivedStateFromProps', document.getElementById('title')) */
     return {
-      username: nextProps.name,
+      username: props.name,
     }
   }
 
@@ -37,13 +37,23 @@ export default class Child1 extends Component {
     document.getElementById('title').style.color = 'green'
 
     document.addEventListener('copy', () => {
-      console.log('coppied')
+      /* console.log('coppied') */
     })
   }
 
+    shouldComponentUpdate(nextProps,nextState){
+/*       if (this.props!== nextProps || this.state!== nextState) {
+        return true
+      } */ 
+      
+      return shallowCompare(this, nextProps, nextState) 
+    }
+
   render() {
-    console.log('render')
-    console.log('render', document.getElementById('title'))
+    /* console.log('render')
+    console.log('render', document.getElementById('title')) */
+    
+    console.log('c1C');
     return (
       <div>
         {/* <h1 style={{ color: 'red' }} id="title">
