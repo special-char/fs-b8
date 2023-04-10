@@ -5,9 +5,15 @@ import Child2 from './Child2'
 // Mounting
 //  1. Constuctor
 //  2. getDerivedstatefromprops
-// 3. render
+//  3. render
+//  4. componentDidMount
 
 // Updating
+// 1. getDerivedStateFromProps
+// 2. ShouldComponentUpdate
+// 3. render
+// 4. getSnapshotBeforeUpdate
+// 5. componentDidUpdate
 
 // Unmounting
 
@@ -24,12 +30,32 @@ const greet = 'hello'
 class App extends Component {
   state = {
     name: 'yagnesh',
+    counter: 0,
+  }
+
+  static getDerivedStateFromError(error) {
+    return {
+      error,
+    }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.log('errorInfo', errorInfo)
   }
 
   render() {
+    console.log('app component')
+    const { name, counter, error } = this.state
+
+    if (error) {
+      return <p>{error.message}</p>
+    }
+
     return (
       <div>
-        <Child1 name={this.state.name} />
+        <p style={{ color: 'red' }}>{name}</p>
+        <p style={{ color: 'red' }}>{counter}</p>
+        {counter < 5 && <Child1 name={name} />}
         <Child2 />
         <button
           type="button"
@@ -38,6 +64,15 @@ class App extends Component {
           }}
         >
           Change Name from App
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            this.setState({ counter: this.state.counter + 1 })
+          }}
+        >
+          Change test from App
         </button>
       </div>
     )
