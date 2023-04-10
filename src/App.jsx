@@ -27,8 +27,11 @@ class App extends Component {
   }
 
   render() {
+    
+    console.log('aC');
     return (
       <div>
+        <p>{this.state.name}</p>
         <Child1 name={this.state.name} />
         <Child2 />
         <button
