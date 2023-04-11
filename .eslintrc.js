@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     'global-require': 0,
     'import/no-extraneous-dependencies': 0,
+    'react/state-in-constructor': 0,
   },
 }

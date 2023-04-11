@@ -1,82 +1,71 @@
-import React, { Component } from 'react'
-import Child1 from './Child1'
-import Child2 from './Child2'
+import React, { Component, createRef } from 'react'
+import Input from './components/Input'
+import Button from './components/button'
 
-// Mounting
-//  1. Constuctor
-//  2. getDerivedstatefromprops
-//  3. render
-//  4. componentDidMount
-
-// Updating
-// 1. getDerivedStateFromProps
-// 2. ShouldComponentUpdate
-// 3. render
-// 4. getSnapshotBeforeUpdate
-// 5. componentDidUpdate
-
-// Unmounting
-
-// Error
-
-const greet = 'hello'
-
-// Child1.getDerivedStateFromProps = (nextProps, prevState) => {
-//   return {
-//     username: `${greet} ${nextProps.name}`,
-//   }
-// }
-
-class App extends Component {
+export default class App extends Component {
   state = {
-    name: 'yagnesh',
-    counter: 0,
+    todoList: [],
   }
 
-  static getDerivedStateFromError(error) {
-    return {
-      error,
-    }
-  }
+  inputRef = createRef()
 
-  componentDidCatch(error, errorInfo) {
-    console.log('errorInfo', errorInfo)
+  addTodo = event => {
+    event.preventDefault()
+    // const inputText = document.getElementById('todoText')
+    this.setState(
+      ({ todoList }) => ({
+        todoList: [
+          ...todoList,
+          { text: this.inputRef.current.value, id: new Date().valueOf() },
+        ],
+      }),
+      () => {
+        this.inputRef.current.value = ''
+      },
+    )
+
+    // this.setState(({ todoText, todoList }) => ({
+    //   todoList: [...todoList, todoText],
+    //   todoText: '',
+    // }))
   }
 
   render() {
-    console.log('app component')
-    const { name, counter, error } = this.state
-
-    if (error) {
-      return <p>{error.message}</p>
-    }
+    const { todoList } = this.state
+    console.log('render')
 
     return (
-      <div>
-        <p style={{ color: 'red' }}>{name}</p>
-        <p style={{ color: 'red' }}>{counter}</p>
-        {counter < 5 && <Child1 name={name} />}
-        <Child2 />
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ name: 'Virat' })
-          }}
-        >
-          Change Name from App
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ counter: this.state.counter + 1 })
-          }}
-        >
-          Change test from App
-        </button>
+      <div className="flex flex-col items-center bg-outline h-screen">
+        <h1 className="text-4xl font-bold my-8">Todo App</h1>
+        <form className="flex" onSubmit={this.addTodo}>
+          <Input
+            id="todoText"
+            ref={this.inputRef}
+            label="Todo Text"
+            placeholder="Enter Todo Text"
+            inputClassName="!rounded-r-none"
+          />
+          <Button
+            type="submit"
+            text="Submit"
+            className="w-fit rounded-l-none"
+          />
+        </form>
+        <div className="w-full flex-1 overflow-scroll">
+          {todoList.map(x => (
+            <div key={x.id} className="flex items-center m-2">
+              <input type="checkbox" name="" id="" />
+              <p className="flex-1 px-4">{x.text}</p>
+              <Button text="Delete" className="w-fit" />
+            </div>
+          ))}
+        </div>
+        <div className="flex w-full">
+          <Button text="All" className="rounded-none" />
+          <Button text="Pending" className="rounded-none" />
+          <Button text="Completed" className="rounded-none" />
+        </div>
       </div>
     )
   }
 }
-
-export default App

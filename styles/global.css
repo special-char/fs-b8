@@ -12,7 +12,7 @@
 
 @layer components {
   .btn {
-    @apply font-sans py-5 border-none w-full rounded-4xl my-3 font-bold text-base text-center flex items-center justify-center gap-2 tracking-[0.007em];
+    @apply font-sans py-5 px-8 border-none w-full rounded-4xl font-bold text-base text-center flex items-center justify-center gap-2 tracking-[0.007em];
 
     &.fill {
       @apply bg-primary text-white;

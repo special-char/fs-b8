@@ -1,9 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
-function Button({ text, variant, icon: Icon, ...rest }) {
+function Button({ text, variant, icon: Icon, className, ...rest }) {
   return (
-    <button type="button" className={`btn ${variant}`} {...rest}>
+    <button
+      type="button"
+      className={clsx('btn', {
+        [variant]: !!variant,
+        [className]: !!className,
+      })}
+      {...rest}
+    >
       {Icon && <Icon height={24} width={24} />}
       {text && <span>{text}</span>}
     </button>
