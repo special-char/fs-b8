@@ -1,10 +1,12 @@
 import React, { Component, createRef } from 'react'
+import clsx from 'clsx'
 import Input from './components/Input'
 import Button from './components/button'
 
 export default class App extends Component {
   state = {
     todoList: [],
+    filterStatus: 'all',
   }
 
   inputRef = createRef()
@@ -16,22 +18,42 @@ export default class App extends Component {
       ({ todoList }) => ({
         todoList: [
           ...todoList,
-          { text: this.inputRef.current.value, id: new Date().valueOf() },
+          {
+            text: this.inputRef.current.value,
+            id: new Date().valueOf(),
+            isDone: false,
+          },
         ],
       }),
       () => {
         this.inputRef.current.value = ''
       },
     )
+  }
 
-    // this.setState(({ todoText, todoList }) => ({
-    //   todoList: [...todoList, todoText],
-    //   todoText: '',
-    // }))
+  updateTodo = todoItem => {
+    const { todoList } = this.state
+    const index = todoList.findIndex(y => y.id === todoItem.id)
+    const newTodoList = [
+      ...todoList.slice(0, index),
+      { ...todoItem, isDone: !todoItem.isDone },
+      ...todoList.slice(index + 1),
+    ]
+    this.setState({ todoList: newTodoList })
+  }
+
+  deleteTodo = todoItem => {
+    const { todoList } = this.state
+    const index = todoList.findIndex(y => y.id === todoItem.id)
+    const newTodoList = [
+      ...todoList.slice(0, index),
+      ...todoList.slice(index + 1),
+    ]
+    this.setState({ todoList: newTodoList })
   }
 
   render() {
-    const { todoList } = this.state
+    const { todoList, filterStatus } = this.state
     console.log('render')
 
     return (
@@ -52,18 +74,55 @@ export default class App extends Component {
           />
         </form>
         <div className="w-full flex-1 overflow-scroll">
-          {todoList.map(x => (
-            <div key={x.id} className="flex items-center m-2">
-              <input type="checkbox" name="" id="" />
-              <p className="flex-1 px-4">{x.text}</p>
-              <Button text="Delete" className="w-fit" />
-            </div>
-          ))}
+          {todoList.map(x => {
+            if (
+              (filterStatus === 'pending' && x.isDone === false) ||
+              (filterStatus === 'completed' && x.isDone === true) ||
+              filterStatus === 'all'
+            ) {
+              return (
+                <div key={x.id} className="flex items-center m-2">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id=""
+                    checked={x.isDone}
+                    onClick={() => this.updateTodo(x)}
+                  />
+                  <p
+                    className={clsx('flex-1 px-4', {
+                      'line-through': x.isDone,
+                    })}
+                  >
+                    {x.text}
+                  </p>
+                  <Button
+                    text="Delete"
+                    className="w-fit"
+                    onClick={() => this.deleteTodo(x)}
+                  />
+                </div>
+              )
+            }
+            return null
+          })}
         </div>
         <div className="flex w-full">
-          <Button text="All" className="rounded-none" />
-          <Button text="Pending" className="rounded-none" />
-          <Button text="Completed" className="rounded-none" />
+          <Button
+            text="All"
+            className="rounded-none"
+            onClick={() => this.setState({ filterStatus: 'all' })}
+          />
+          <Button
+            text="Pending"
+            className="rounded-none"
+            onClick={() => this.setState({ filterStatus: 'pending' })}
+          />
+          <Button
+            text="Completed"
+            className="rounded-none"
+            onClick={() => this.setState({ filterStatus: 'completed' })}
+          />
         </div>
       </div>
     )
