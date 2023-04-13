@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react'
-import clsx from 'clsx'
-import Input from './components/Input'
-import Button from './components/button'
+import TodoForm from './todoForm'
+import TodoList from './todoList'
+import TodoFilter from './todoFilter'
 
 export default class App extends Component {
   state = {
@@ -52,78 +52,24 @@ export default class App extends Component {
     this.setState({ todoList: newTodoList })
   }
 
+  filterTodo = filterStatus => {
+    this.setState({ filterStatus })
+  }
+
   render() {
     const { todoList, filterStatus } = this.state
-    console.log('render')
 
     return (
       <div className="flex flex-col items-center bg-outline h-screen">
         <h1 className="text-4xl font-bold my-8">Todo App</h1>
-        <form className="flex" onSubmit={this.addTodo}>
-          <Input
-            id="todoText"
-            ref={this.inputRef}
-            label="Todo Text"
-            placeholder="Enter Todo Text"
-            inputClassName="!rounded-r-none"
-          />
-          <Button
-            type="submit"
-            text="Submit"
-            className="w-fit rounded-l-none"
-          />
-        </form>
-        <div className="w-full flex-1 overflow-scroll">
-          {todoList.map(x => {
-            if (
-              (filterStatus === 'pending' && x.isDone === false) ||
-              (filterStatus === 'completed' && x.isDone === true) ||
-              filterStatus === 'all'
-            ) {
-              return (
-                <div key={x.id} className="flex items-center m-2">
-                  <input
-                    type="checkbox"
-                    name=""
-                    id=""
-                    checked={x.isDone}
-                    onClick={() => this.updateTodo(x)}
-                  />
-                  <p
-                    className={clsx('flex-1 px-4', {
-                      'line-through': x.isDone,
-                    })}
-                  >
-                    {x.text}
-                  </p>
-                  <Button
-                    text="Delete"
-                    className="w-fit"
-                    onClick={() => this.deleteTodo(x)}
-                  />
-                </div>
-              )
-            }
-            return null
-          })}
-        </div>
-        <div className="flex w-full">
-          <Button
-            text="All"
-            className="rounded-none"
-            onClick={() => this.setState({ filterStatus: 'all' })}
-          />
-          <Button
-            text="Pending"
-            className="rounded-none"
-            onClick={() => this.setState({ filterStatus: 'pending' })}
-          />
-          <Button
-            text="Completed"
-            className="rounded-none"
-            onClick={() => this.setState({ filterStatus: 'completed' })}
-          />
-        </div>
+        <TodoForm addTodo={this.addTodo} ref={this.inputRef} />
+        <TodoList
+          todoList={todoList}
+          filterStatus={filterStatus}
+          updateTodo={this.updateTodo}
+          deleteTodo={this.deleteTodo}
+        />
+        <TodoFilter filterTodo={this.filterTodo} />
       </div>
     )
   }
