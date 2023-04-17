@@ -16,7 +16,7 @@ const Input = forwardRef(
     },
     ref,
   ) => (
-    <div>
+    <div className="w-full">
       <label className="sr-only" htmlFor={id}>
         {placeholder}
       </label>
