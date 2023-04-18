@@ -1,0 +1,7 @@
+.mainC {
+    @apply flex justify-center items-center h-screen
+}
+
+.mainC1 {
+    @apply flex flex-col items-center
+}

@@ -1,44 +1,74 @@
-import React, { Component } from 'react'
-import Child1 from './Child1'
-import Child2 from './Child2'
+import React, { Component, createRef } from 'react'
+import './components/gl.css'
 
-// Mounting
-//  1. Constuctor
-//  2. getDerivedstatefromprops
-// 3. render
+export default class App extends Component {
+  constructor(props) {
+    super(props)
 
-// Updating
+    this.myrefforC = createRef()
+    this.state = {
+      citys: [
+        {
+          id: 1,
+          Cname: 'c1',
+          temp: 21,
+        },
+        {
+          id: 2,
+          Cname: 'c2',
+          temp: 22,
+        },
+        {
+          id: 3,
+          Cname: 'c3',
+          temp: 23,
+        },
+        {
+          id: 4,
+          Cname: 'c4',
+          temp: 24,
+        },
+      ],
+      finder: '',
+    }
+  }
 
-// Unmounting
+  handels = e => {
+    e.preventDefault()
 
-// Error
-
-// Child1.getDerivedStateFromProps = (nextProps, prevState) => {
-//   return {
-//     username: `${greet} ${nextProps.name}`,
-//   }
-// }
-
-class App extends Component {
-  state = {
-    name: 'yagnesh',
+    this.setState(
+      ({ finder }) => ({
+        finder: this.myrefforC.current.value,
+      }),
+      () => {
+        this.myrefforC.current.value = ''
+      },
+    )
   }
 
   render() {
-    console.log('aC')
+    console.log(this.state.citys)
+    console.log(this.state.finder)
     return (
-      <div>
-        <p>{this.state.name}</p>
-        <Child1 name={this.state.name} />
-        <Child2 />
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ name: 'Virat' })
-          }}
-        >
-          Change Name from App
-        </button>
+      <div className="mainC">
+        <div className="mainC1">
+          <h2>wether app</h2>
+
+          <form onSubmit={this.handels}>
+            <input type="text" className="inp" ref={this.myrefforC} />
+            <button type="submit">find</button>
+          </form>
+
+          <div className="log">
+            {this.state.citys.map(x => {
+              if (x.Cname === this.state.finder) {
+                ;<p>{x.temp}</p>
+              } else {
+                ;<p>we could not finde your value</p>
+              }
+            })}
+          </div>
+        </div>
       </div>
     )
   }
