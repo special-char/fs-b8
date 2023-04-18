@@ -10,22 +10,22 @@ export default class App extends Component {
       citys: [
         {
           id: 1,
-          Cname: 'c1',
+          Cname: 'ahemdabad',
           temp: 21,
         },
         {
           id: 2,
-          Cname: 'c2',
+          Cname: 'surat',
           temp: 22,
         },
         {
           id: 3,
-          Cname: 'c3',
+          Cname: 'mumbai',
           temp: 23,
         },
         {
           id: 4,
-          Cname: 'c4',
+          Cname: 'goa',
           temp: 24,
         },
       ],
@@ -52,20 +52,27 @@ export default class App extends Component {
     return (
       <div className="mainC">
         <div className="mainC1">
-          <h2>wether app</h2>
+          <h2>weather app</h2>
 
           <form onSubmit={this.handels}>
             <input type="text" className="inp" ref={this.myrefforC} />
-            <button type="submit">find</button>
+            <button type="submit" className="btnn">
+              find
+            </button>
           </form>
 
           <div className="log">
             {this.state.citys.map(x => {
               if (x.Cname === this.state.finder) {
-                ;<p>{x.temp}</p>
+                return (
+                  <p>
+                    ther is a {x.temp}C temprature in {x.Cname}
+                  </p>
+                )
               } else {
                 ;<p>we could not finde your value</p>
               }
+              return null
             })}
           </div>
         </div>
