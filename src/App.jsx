@@ -1,82 +1,67 @@
-import React, { Component } from 'react'
-import Child1 from './Child1'
-import Child2 from './Child2'
+import React, { useState } from 'react'
+import Input from './components/Input'
+import Button from './components/Button'
 
-// Mounting
-//  1. Constuctor
-//  2. getDerivedstatefromprops
-//  3. render
-//  4. componentDidMount
-
-// Updating
-// 1. getDerivedStateFromProps
-// 2. ShouldComponentUpdate
-// 3. render
-// 4. getSnapshotBeforeUpdate
-// 5. componentDidUpdate
-
-// Unmounting
-
-// Error
-
-const greet = 'hello'
-
-// Child1.getDerivedStateFromProps = (nextProps, prevState) => {
-//   return {
-//     username: `${greet} ${nextProps.name}`,
-//   }
-// }
-
-class App extends Component {
-  state = {
-    name: 'yagnesh',
-    counter: 0,
-  }
-
-  static getDerivedStateFromError(error) {
-    return {
-      error,
-    }
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.log('errorInfo', errorInfo)
-  }
-
-  render() {
-    console.log('app component')
-    const { name, counter, error } = this.state
-
-    if (error) {
-      return <p>{error.message}</p>
-    }
-
-    return (
-      <div>
-        <p style={{ color: 'red' }}>{name}</p>
-        <p style={{ color: 'red' }}>{counter}</p>
-        {counter < 5 && <Child1 name={name} />}
-        <Child2 />
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ name: 'Virat' })
-          }}
-        >
-          Change Name from App
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            this.setState({ counter: this.state.counter + 1 })
-          }}
-        >
-          Change test from App
-        </button>
-      </div>
-    )
-  }
+const weatherData = {
+  pune: {
+    temperature: '72°F',
+    condition: 'Sunny',
+    icon: 'sun',
+  },
+  delhi: {
+    temperature: '68°F',
+    condition: 'Partly Cloudy',
+    icon: 'cloud-sun',
+  },
+  disa: {
+    temperature: '60°F',
+    condition: 'Rain',
+    icon: 'cloud-rain',
+  },
 }
 
-export default App
+const WeatherApp = () => {
+  const [city, setCity] = useState('')
+  const [weather, setWeather] = useState(null)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    if (city in weatherData) {
+      setWeather(weatherData[city])
+    } else {
+      setWeather(null)
+    }
+  }
+
+  return (
+    <div>
+      <h1>Weather App</h1>
+      <form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          placeholder="Enter city name"
+          value={city}
+          onChange={e => setCity(e.target.value)}
+        />
+        <Button type="submit" text="Get Weather"></Button>
+      </form>
+      {weather ? (
+        <div>
+          <h2>{city}</h2>
+          <p>Temperature: {weather.temperature}</p>
+          <p>Condition: {weather.condition}</p>
+
+          {weather.icon === 'sun' && <i className="fas fa-sun"></i>}
+          {weather.icon === 'cloud-sun' && <i className="fas fa-cloud-sun"></i>}
+          {weather.icon === 'cloud-rain' && (
+            <i className="fas fa-cloud-rain"></i>
+          )}
+        </div>
+      ) : (
+        <p>No data available for the entered city.</p>
+      )}
+    </div>
+  )
+}
+
+export default WeatherApp
