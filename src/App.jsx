@@ -37,8 +37,8 @@ export default class App extends Component {
     e.preventDefault()
 
     this.setState(
-      ({ finder }) => ({
-        finder: this.myrefforC.current.value,
+      ({ citys }) => ({
+        finder: citys.find(x => x.Cname === this.myrefforC.current.value),
       }),
       () => {
         this.myrefforC.current.value = ''
@@ -47,8 +47,9 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state.citys)
-    console.log(this.state.finder)
+    /* console.log(this.state.citys)
+    console.log(this.state.finder) */
+    const { finder } = this.state
     return (
       <div className="mainC">
         <div className="mainC1">
@@ -62,18 +63,23 @@ export default class App extends Component {
           </form>
 
           <div className="log">
-            {this.state.citys.map(x => {
+            {finder ? (
+              <p>
+                ther is a {finder.temp}C temprature in {finder.Cname}
+              </p>
+            ) : (
+              <p>we could not finde your date</p>
+            )}
+            {/* {this.state.citys.map(x => {
               if (x.Cname === this.state.finder) {
                 return (
-                  <p>
-                    ther is a {x.temp}C temprature in {x.Cname}
-                  </p>
+                  
                 )
               } else {
-                ;<p>we could not finde your value</p>
+                ;
+                return null
               }
-              return null
-            })}
+            })} */}
           </div>
         </div>
       </div>
