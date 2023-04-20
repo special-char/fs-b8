@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import './components/gl.css'
+import './gl.css'
 
 export default class App extends Component {
   constructor(props) {
@@ -70,16 +70,6 @@ export default class App extends Component {
             ) : (
               <p>we could not finde your date</p>
             )}
-            {/* {this.state.citys.map(x => {
-              if (x.Cname === this.state.finder) {
-                return (
-                  
-                )
-              } else {
-                ;
-                return null
-              }
-            })} */}
           </div>
         </div>
       </div>
