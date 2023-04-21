@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react'
+import './gl.css'
 
 export default class App1 extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ export default class App1 extends Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.mainl('all')
   }
 
@@ -94,7 +95,6 @@ export default class App1 extends Component {
   }
 
   render() {
-    console.log(this.state.todol)
     return (
       <div className="mainC">
         <h2>todo app</h2>
@@ -103,16 +103,20 @@ export default class App1 extends Component {
           <button type="submit">add</button>
         </form>
 
-        <div className="log">
+        <div>
           {this.state.todol.map(x => (
-            <div>
+            <div key={x.id} className="log">
               <input
                 type="checkbox"
                 onChange={() => this.check(x)}
                 checked={x.isdone}
               />
-              <p>{x.text}</p>
-              <button type="button" onClick={() => this.deleth(x)}>
+              <p className="ptag">{x.text}</p>
+              <button
+                type="button"
+                className="btn"
+                onClick={() => this.deleth(x)}
+              >
                 delet
               </button>
             </div>
