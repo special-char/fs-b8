@@ -7,30 +7,15 @@ export default class App extends Component {
 
     this.myrefforC = createRef()
     this.state = {
-      citys: [
-        {
-          id: 1,
-          Cname: 'ahemdabad',
-          temp: 21,
-        },
-        {
-          id: 2,
-          Cname: 'surat',
-          temp: 22,
-        },
-        {
-          id: 3,
-          Cname: 'mumbai',
-          temp: 23,
-        },
-        {
-          id: 4,
-          Cname: 'goa',
-          temp: 24,
-        },
-      ],
+      citys: [],
       finder: '',
     }
+  }
+
+  async componentDidMount() {
+    const res = await fetch('http://localhost:3000/weather')
+    const json = await res.json()
+    this.setState({ citys: json })
   }
 
   handels = e => {
@@ -38,7 +23,7 @@ export default class App extends Component {
 
     this.setState(
       ({ citys }) => ({
-        finder: citys.find(x => x.Cname === this.myrefforC.current.value),
+        finder: citys.find(y => y.Cname === this.myrefforC.current.value),
       }),
       () => {
         this.myrefforC.current.value = ''
@@ -47,8 +32,6 @@ export default class App extends Component {
   }
 
   render() {
-    /* console.log(this.state.citys)
-    console.log(this.state.finder) */
     const { finder } = this.state
     return (
       <div className="mainC">

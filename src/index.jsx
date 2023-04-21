@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { createRoot } from 'react-dom/client'
-import App1 from '././components/todo/App1'
+import App from '././components/weather/App'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
-root.render(<App1 />)
+root.render(<App />)

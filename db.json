@@ -1,3 +1,25 @@
 {
-  "todol": []
+  "todol": [],
+  "weather":[
+      {
+        "id": 1,
+        "Cname": "ahemdabad",
+        "temp": 21
+      },
+      {
+        "id": 2,
+        "Cname": "surat",
+        "temp": 22
+      },
+      {
+        "id": 3,
+        "Cname": "mumbai",
+        "temp": 23
+      },
+      {
+        "id": 4,
+        "Cname": "goa",
+        "temp": 24
+      }
+  ]
 }
