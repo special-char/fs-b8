@@ -1,21 +1,5 @@
 {
-  "todol": [
-    {
-      "text": "yogesh",
-      "isdone": false,
-      "id": 1
-    },
-    {
-      "text": "doshi",
-      "isdone": false,
-      "id": 2
-    },
-    {
-      "text": "raj",
-      "isdone": false,
-      "id": 3
-    }
-  ],
+  "todol": [],
   "weather": [
     {
       "id": 1,
