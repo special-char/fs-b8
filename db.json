@@ -1,0 +1,27 @@
+{
+    "weatherapp": [
+       {
+        "city":"Mumbai",
+        "temperature":"28",
+        "condition":"Sunny"
+       },{
+        "city":"Delhi",
+        "temperature":"25",
+        "condition":"Cloudy"
+       },{
+        "city":"Gujarat",
+        "temperature":"20",
+        "condition":"Rainy"
+       },{
+        "city":"Shimla",
+        "temperature":"30",
+        "condition":"Partly cloudy"
+       },{
+        "city":"Ladakh",
+        "temperature":"45",
+        "condition":"Thunderstorms"
+       }
+      ]
+      
+     
+}
