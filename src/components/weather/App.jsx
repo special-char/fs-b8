@@ -13,9 +13,11 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch('http://localhost:3000/weather')
-    const json = await res.json()
-    this.setState({ citys: json })
+    try {
+      const res = await fetch('http://localhost:3000/weather')
+      const json = await res.json()
+      this.setState({ citys: json })
+    } catch (error) {}
   }
 
   handels = e => {

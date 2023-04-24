@@ -75,7 +75,7 @@ export default class App1 extends Component {
   check = async iteam => {
     try {
       const res = await fetch(`http://localhost:3000/todol/${iteam.id}`, {
-        method: 'put',
+        method: 'PUT',
         body: JSON.stringify({ ...iteam, isdone: !iteam.isdone }),
         headers: {
           'content-type': 'application/json',
@@ -83,12 +83,14 @@ export default class App1 extends Component {
         },
       })
 
-      const json = res.json()
-
       this.setState(({ todol }) => {
         const index = todol.findIndex(y => y.id === iteam.id)
         return {
-          todol: [...todol.slice(0, index), json, ...todol.slice(index + 1)],
+          todol: [
+            ...todol.slice(0, index),
+            { ...iteam, isdone: !iteam.isdone },
+            ...todol.slice(index + 1),
+          ],
         }
       })
     } catch (error) {}
@@ -107,6 +109,7 @@ export default class App1 extends Component {
           {this.state.todol.map(x => (
             <div key={x.id} className="log">
               <input
+                required
                 type="checkbox"
                 onChange={() => this.check(x)}
                 checked={x.isdone}
